@@ -32,6 +32,7 @@ RUN apk update && \
 COPY mix.* ./
 COPY apps/deployment_scope/mix.* ./apps/deployment_scope/
 COPY apps/docker/mix.* ./apps/docker/
+COPY apps/domains/mix.* ./apps/domains/
 COPY apps/event_stream/mix.* ./apps/event_stream/
 COPY apps/metrix/mix.* ./apps/metrix/
 COPY apps/proxy/mix.* ./apps/proxy/

@@ -106,4 +106,3 @@ rm-latest:
 	@echo "====== Stopping and removing running containers"
 	@docker-compose -f docker-compose.yaml rm -s -f
 .PHONY: rm-latest
-
