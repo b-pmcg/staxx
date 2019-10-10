@@ -33,7 +33,7 @@ services:
       NATS_URL: nats.local
       DOCKER_DEV_MODE_ALLOWED: 'true'
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
+      # - /var/run/docker.sock:/var/run/docker.sock
       - '/tmp/chains:/opt/chains'
       - '/tmp/snapshots:/opt/snapshots'
       - '/tmp/stacks:/opt/stacks'
