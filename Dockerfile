@@ -80,6 +80,7 @@ RUN apk update && \
       docker
 
 ENV APP_NAME=${APP_NAME} \
+    DOCKER_HOST=http://127.0.0.1 \
     PORT=${PORT} \
     MIX_ENV=${MIX_ENV} \
     DEPLOYMENT_SERVICE_URL=http://testchain-deployment.local:5001/rpc \
@@ -88,7 +89,7 @@ ENV APP_NAME=${APP_NAME} \
     NATS_URL=nats.local \
     STACKS_DIR=/opt/stacks \
     SNAPSHOTS_DB_PATH="/opt/snapshots" \
-    STACKS_FRONT_URL=http://localhost \
+    STACKS_FRONT_URL=http://127.0.0.1 \
     RELEASE_COOKIE="W_cC]7^rUeVZc|}$UL{@&1sQwT3}p507mFlh<E=/f!cxWI}4gpQx7Yu{ZUaD0cuK" \
     RELEASE_NODE=staxx@staxx.local \
     DOCKER_DEV_MODE_ALLOWED=false

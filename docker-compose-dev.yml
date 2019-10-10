@@ -33,7 +33,7 @@ services:
       NATS_URL: nats.local
       DOCKER_DEV_MODE_ALLOWED: 'true'
     volumes:
-      # - /var/run/docker.sock:/var/run/docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock
       - '/tmp/chains:/opt/chains'
       - '/tmp/snapshots:/opt/snapshots'
       - '/tmp/stacks:/opt/stacks'
@@ -81,9 +81,9 @@ services:
     depends_on:
       - staxx
     environment:
-      TESTCHAIN_SERVICE_URL: http://localhost
+      TESTCHAIN_SERVICE_URL: http://127.0.0.1
       TESTCHAIN_SERVICE_PORT: 4000
-      TESTCHAIN_SERVICE_WS_URL: ws://localhost:4000/socket
+      TESTCHAIN_SERVICE_WS_URL: ws://127.0.0.1:4000/socket
     networks:
       - net1
   # prometheus:
